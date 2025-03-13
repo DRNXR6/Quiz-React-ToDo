@@ -350,7 +350,7 @@ function ToDo() {
             {Consultas.filter(consulta => consulta.estado === "pendiente").length === 0 ? (
       
               <p align="center">No hay consultas pendientes</p>
-             ) : (
+            ) : (
       
               Consultas.filter(consulta => consulta.estado === "pendiente").map((consulta, index) => (
           
@@ -359,8 +359,13 @@ function ToDo() {
                   <input
                       className='check' type="checkbox" onClick={e => inputCheck(consulta.usuario,consulta.consulta,consulta.estado,consulta.id)}
                   />
+                    
+                    <p className='pNombre'>{consulta.usuario} </p>
+                    
+               
 
-                  <p className='pNombre'>{consulta.usuario} </p>
+                  {/* <p className='pNombre'>{consulta.usuario} </p> */}
+
 
                   <button class="edit-button" onClick={e => btnEditar(consulta.consulta,consulta.usuario,consulta.id)}>
                     <svg class="edit-svgIcon" viewBox="0 0 512 512">
