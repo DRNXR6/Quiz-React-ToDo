@@ -1,8 +1,10 @@
-
 main {
+  box-shadow: 0 0 100px #d1d1d1;
     display: flex;
     flex-direction: column;
-    background-color: rgba(43, 43, 57, 0.658);
+    background: linear-gradient(to bottom right, rgba(43, 43, 57, 0.658), rgb(45, 44, 44));
+
+
     box-shadow: 0 1rem 3rem rgba(black, .175);
     width: 60%;
     margin: 40px auto;
@@ -20,7 +22,6 @@ main button:hover {
     box-shadow: 10px 10px 40px #d1d1d1;
     transition: 0.5s;
     transform: scale(1.2);
-
 }
 
 .btnAgregar {
@@ -34,8 +35,33 @@ main button:hover {
 
 .Contador {
     position: relative;
-    top: 0;
+    left: -30%;
+    width: auto;
+    display: inline-block;
 }
+
+.btnCambioContenedor {
+  width: 200px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid whitesmoke ;
+  border-radius: 20px;
+  width: 150px;
+  margin: auto;
+  position: relative;
+  top: 35px;
+  left: 30%;
+  color: blue;
+
+
+}
+
+.btnCambioContenedor:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+
+}
+
 
 .contenedorConsultas {
     width: 90%;
@@ -51,11 +77,86 @@ main button:hover {
 }
 
 .DivConsulta {
-    background-color: rgba(0, 139, 139, 0.682);
+    background-color: rgba(0, 139, 139, 0.4);
     border-radius: 20px;
     margin: 5px 20px;
     padding: 5px;
     overflow: hidden;
+}
+
+
+
+.popup {
+  border-radius: 20px;
+  background-color: rgba(3, 5, 77, 0.727);
+  box-shadow: 0 0 40px 5px lightblue;
+}
+
+.icon {
+  background-color: rgba(153, 205, 50, 0.4);
+}
+
+.title {
+  color: darkcyan;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0;
+
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btnCancel {
+  background-color: crimson;
+}
+
+.SwalTextarea {
+  background-color: transparent;
+  padding: 5px;
+  color: whitesmoke;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.SwalTextarea:focus {
+  box-shadow: 0 0 10px whitesmoke;
+  transform: scale(1.03);
+}
+
+.Mensaje {
+  transition: 0.5s;
+  background-color: rgba(245, 245, 245, 0.638);
+  font-weight: bold;
+  color: darkcyan;
+  display: inline-block;
+  padding: 0;
+  width: 70%;
+  margin: auto;
+}
+
+.Mensaje2 {
+  transition: 0.5s;
+  background-color: rgba(245, 245, 245, 0.638);
+  font-weight: bold;
+  color: darkcyan;
+  display: inline-block;
+  padding: 0;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+
+
+.DivConsulta:hover {
+  margin: 10px;
+  transition: 0.1s;
+  background-color: rgba(17, 205, 205, 0.6);
+  box-shadow: 10px 10px 30px rgb(118, 112, 112);
 }
 
 .check {
@@ -241,10 +342,7 @@ main button:hover {
     transition-duration: 0.3s;
   }
 
-  .Contador2 {
-    display: inline-block ;
-    background-color: rgba(4, 39, 100, 0.682);
-  }
+
 
   @media (max-width:1200px) {
     .delete-button {
@@ -261,6 +359,14 @@ main button:hover {
     }
   }
 
+  .Contador {
+    left: -20%;
+  }
+
+  .btnCambioContenedor {
+    left: 20%;
+  }
+
   @media (max-width:880px) {
 
     main {
@@ -271,10 +377,19 @@ main button:hover {
         text-align: left;
         margin-left: 70px
     }
+    
     .btnSalir {
         position: relative;
         top: -55px;
         left: 65%;
+    }
+
+    .Contador {
+      left: -20%;
+    }
+  
+    .btnCambioContenedor {
+      left: 20%;
     }
 
     .pConsulta {
@@ -297,12 +412,21 @@ main button:hover {
 
   @media (max-width:580px) {
 
+
     main {
         width: 100%;
     }
     main h1 {
         text-align: left;
         margin-left: 50px;
+    }
+
+    .Contador {
+      left: -20%;
+    }
+  
+    .btnCambioContenedor {
+      left: 20%;
     }
 
     .DivConsulta {
